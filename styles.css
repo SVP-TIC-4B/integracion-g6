@@ -1,0 +1,243 @@
+/* Variables de color para fácil mantenimiento */
+:root {
+    --color-primary: #001f3f; /* Azul Oscuro Marino */
+    --color-secondary: #0074d9; /* Azul más vibrante */
+    --color-background: #ffffff; /* Fondo principal */
+    --color-text: #000000; /* Texto principal */
+    --color-nav-bg: #001f3f; 
+    --color-subscribe-bg: #ff4136; /* Rojo/Naranja para el botón de suscripción */
+    --color-section-bg: #f0f0f0; /* Gris claro para la sección ¿Cómo funciona? */
+}
+
+/* ---------------------------------- */
+/* ESTILOS GLOBALES Y TIPOGRAFÍA */
+/* ---------------------------------- */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 3em;
+    margin-bottom: 0.1em;
+    color: var(--color-primary); 
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: var(--color-text);
+    text-transform: uppercase;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* ---------------------------------- */
+/* BARRA DE NAVEGACIÓN (HEADER) */
+/* ---------------------------------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-nav-bg);
+    color: var(--color-background);
+    padding: 10px 20px;
+    height: 40px; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.robot-icon {
+    font-size: 1.2em; 
+    margin-right: 5px;
+}
+
+.nav-links a {
+    color: var(--color-background);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.subscribe-button {
+    background-color: var(--color-subscribe-bg);
+    color: var(--color-background);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+}
+
+/* ---------------------------------- */
+/* SECCIÓN TÍTULO PRINCIPAL */
+/* ---------------------------------- */
+
+.hero-title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.hero-title h1 {
+    font-size: 4em;
+    line-height: 0.8;
+}
+
+.hero-title p {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+/* ---------------------------------- */
+/* SECCIONES DE CONTENIDO (IMAGEN / VIDEO) */
+/* ---------------------------------- */
+
+.section-que-es .content-wrapper,
+.section-como-funciona .content-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.section-que-es .content-wrapper {
+    flex-direction: row; 
+}
+
+.section-como-funciona .content-wrapper {
+    flex-direction: row-reverse; 
+}
+
+/* Dimensiones fijas para el video y la imagen principal */
+.robot-main-image,
+.video-container {
+    width: 300px;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+/* ✅ AJUSTE PARA IMAGEN DEL ROBOT: object-fit: contain; */
+.robot-main-image {
+    object-fit: contain; /* <-- ESTO MANTIENE LAS PROPORCIONES (con posibles barras laterales) */
+}
+
+/* Ajuste para video vertical: object-fit: contain; */
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Esto mantiene las proporciones (con barras negras laterales) */
+}
+
+
+.text-content {
+    flex-grow: 1;
+}
+
+.section-como-funciona {
+    background-color: var(--color-section-bg); 
+    padding: 30px 20px;
+    margin-left: -20px; 
+    margin-right: -20px;
+}
+
+.section-como-funciona h2 {
+    color: var(--color-primary);
+}
+
+/* ---------------------------------- */
+/* SECCIÓN COMPONENTES (GALERÍA ESTÁTICA) */
+/* ---------------------------------- */
+
+.section-componentes h2 {
+    margin-top: 40px;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.section-componentes ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+/* Contenedor principal de la galería */
+.components-gallery {
+    display: flex; 
+    justify-content: space-between;
+    gap: 15px; 
+    margin-bottom: 20px;
+}
+
+.component-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%; 
+}
+
+.component-image {
+    width: 100%; 
+    height: 120px;
+    object-fit: contain; 
+    border: 1px solid #ccc; 
+    margin-bottom: 5px; 
+}
+
+.component-label-text {
+    font-size: 0.9em;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* ---------------------------------- */
+/* SECCIÓN CTA FINAL */
+/* ---------------------------------- */
+
+.cta-section {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    border: 3px solid var(--color-primary);
+    padding: 15px 30px;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.cta-link {
+    display: block;
+    font-size: 1.5em;
+    text-decoration: underline;
+    margin-top: 5px;
+    color: var(--color-secondary);
+}

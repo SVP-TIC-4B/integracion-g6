@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBINHO - El robot inteligente</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="robot-icon">🤖</span>
+            <span class="logo-text">ROBINHO</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">News</a>
+            <a href="#">Robots</a>
+            <a href="#">Ceo</a>
+        </nav>
+        <a href="#" class="subscribe-button">SUSCRIBIRME POR $250</a>
+    </header>
+
+    <main class="container">
+        <section class="hero-title">
+            <h1>ROBINHO</h1>
+            <p>El robot inteligente</p>
+        </section>
+
+        <section class="section-que-es">
+            <div class="content-wrapper">
+                
+                <img src="images/fotodelrobot.jpeg" alt="Foto del robot Robinho" class="robot-main-image">
+
+                <div class="text-content">
+                    <h2>¿QUE ES?</h2>
+                    <p>Robinho es un robot que percibe su entorno y dependiendo la luz que recibe busca demostrarlo a través de su luz <b>RGB</b></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-como-funciona">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h2>¿CÓMO FUNCIONA?</h2>
+                    <p>El robot percibe a través de su sensor de luz, la luz de su alrededor y dependiendo la cantidad que recibe, tiene una luz <b>RGB</b> que cambia de color. A su vez si la placa de <b>micro-bit</b> es agitada muestra una cara feliz :) y suena una música mostrando que llegó a la luz que se quería</p>
+                </div>
+                
+                <div class="video-container">
+                    <video controls poster="images/miniatura_video.jpg">
+                        <source src="videos/videorobot.mp4" type="video/mp4"> 
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+                </div>
+        </section>
+
+        <section class="section-componentes">
+            <h2>SUS COMPONENTES</h2>
+            <ul>
+                <li><b>Sensor de luz:</b> percibe la luz de su alrededor y la pasa la placa</li>
+                <li><b>Led RGB:</b> Muestra una luz distinta dependiendo la luz que recibe</li>
+                <li><b>Acelerómetro:</b> Al agitarse la placa muestra carita feliz</li>
+                <li><b>Parlante:</b> al ser agitada la placa suena una música</li>
+            </ul>
+
+            <div class="components-gallery">
+                <div class="component-item">
+                    <img src="images/Captura.PNG" alt="Sensor de luz" class="component-image">
+                    <span class="component-label-text">Sensor de luz</span>
+                </div>
+                <div class="component-item">
+                    <img src="images/ledrgb.PNG" alt="LED RGB" class="component-image">
+                    <span class="component-label-text">Led RGB</span>
+                </div>
+                <div class="component-item">
+                    <img src="images/acelerometro.PNG" alt="Acelerómetro" class="component-image">
+                    <span class="component-label-text">Acelerómetro</span>
+                </div>
+                <div class="component-item">
+                    <img src="images/bocinaparlante.PNG" alt="Parlante pequeño" class="component-image">
+                    <span class="component-label-text">Parlante</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <a href="documentos/Manual.pdf" class="cta-button" target="_blank">
+                SI QUIERES CONSTRUIR ESTE ROBOT
+                <span class="cta-link">HACE CLICK AQUÍ</span>
+            </a>
+        </section>
+    </main>
+</body>
+</html>
